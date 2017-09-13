@@ -1,0 +1,79 @@
+:host {
+  grid-area: footer;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+footer {
+  padding-top:39.25%;
+  font-size:0.75rem;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+button#scroll_to_top:hover {
+  background:rgba(255,255,255,0.25);
+}
+button#scroll_to_top {
+  background:rgba(255,255,255,0.125);
+  border:0;
+  outline:none;
+  color:#ffffff;
+  font-weight:900;
+  font-size:2em;
+  position: absolute;
+  -webkit-border-radius: 4em;
+  -moz-border-radius: 4em;
+  border-radius: 4em;
+  right:2px;
+  width: 1.8em;
+  height:1.8em;
+  cursor: pointer;
+}
+
+.legal_disclaimer {
+
+}
+
+.tagline {
+}
+.bg-behind:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100vw;
+  min-height:312.5%;
+  top:100%;
+  bottom: -3125%;
+  background:#516C8B;
+}
+.bg-behind {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  min-height:60px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 32%;
+}
+
+.bg-sun {
+  position: absolute;
+  top:0;
+  left:175px;
+  z-index:-2;
+  animation: rotate 9.5s infinite linear;
+}
+
+.bg-mountains {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100vw;
+  bottom:0;
+}

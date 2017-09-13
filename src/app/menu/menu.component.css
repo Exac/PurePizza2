@@ -1,0 +1,151 @@
+:host {
+  grid-area: main;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.dish {
+  display: grid;
+  grid-template-columns: 58fr 36fr 4fr;
+  grid-template-rows: 2fr 12fr 2fr;
+  grid-template-areas:
+    ".    .   ."
+    ".    inf ."
+    ".    .   .";
+  min-height:20vh;
+  max-width:100vw;
+  background-position: center;
+}
+
+.dish:nth-child(2n+1) {
+  grid-template-columns: 4fr 36fr 58fr;
+}
+
+
+@media screen and (max-width: 600px){
+  .dish {
+    grid-template-columns: 4fr 92fr 4fr !important;
+  }
+}
+.dish:nth-child(2n+1) .dish_info_container {
+  animation: slideinfromright;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+}
+.dish .dish_info_container {
+  grid-area: inf;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 618fr 191fr 191fr;
+  grid-template-areas:
+    "nam nam nam"
+    "prc .   cal"
+    "add add add";
+  min-height:20vh;
+  background-image: linear-gradient(to bottom, #f2ca3a 0%,#fdc037 100%);
+  background-blend-mode: multiply;
+  padding: 2px;
+  outline-offset:6px;
+  outline: 3px double #846a29;
+  animation: slideinfromleft;
+  animation-duration: 500ms;
+  animation-timing-function: ease;
+}
+
+@keyframes slideinfromleft {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideinfromright {
+  from {
+    transform: translateX(200%);
+  }
+}
+
+.dish .dish_name {
+  color: rgba(18,3,3,0.66);
+  font-weight:900;
+  grid-area: nam;
+  font-family:"Source Sans Pro", sans-serif;
+  font-size: 3em;
+  text-shadow: 1px 1px rgba(255,255,255,0.225), -1px -1px rgba(72,36,36,0.66);
+}
+
+.dish .dish_price {
+  grid-area:prc;
+}
+
+.dish .dish_cal {
+  grid-area: cal;
+}
+
+@media screen and (max-width: 600px){
+  .dish .dish_info_container{
+    background-image: linear-gradient(to bottom, rgba(242,202,58,0.66) 0%,rgba(253,192,55,0.66) 100%);
+    outline-offset:0;
+    outline: none;
+  }
+  .dish .dish_name {
+    font-size: 1.5em;
+  }
+}
+
+button {
+  border: 0;
+  outline:0;
+  background:none;
+  color:inherit;
+  line-height:inherit;
+  font-weight:inherit;
+  font-family:inherit;
+}
+
+button:active {
+
+}
+
+.dish_add_to_cart {
+  grid-area: add;
+  position: relative;
+  background-color: rgba(18,3,3,0.66);
+  color: #f2ca3a;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.dish_add_to_cart:before {
+  content: '';
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="%23f2ca3a" d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg>');
+  background-repeat: no-repeat;
+  position: absolute;
+  line-height:0;
+  display: block;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  width: auto;
+  height: 80%;
+  margin:7px;
+  transition: all 0.5s ease-in-out;
+  opacity:0;
+}
+
+.dish_add_to_cart:hover {
+  padding:0 0 0 80px;
+  transition-duration: 0.0875s;
+}
+.dish_add_to_cart:active {
+  padding:0 0 0 80px;
+  background-color:rgba(18,3,3,0.875);
+  transition-duration: 0.0875s;
+}
+
+.dish_add_to_cart:hover:before {
+  left:33%;
+  opacity:1.00;
+  transition-duration: 0.0875s;
+}

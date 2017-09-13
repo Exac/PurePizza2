@@ -1,0 +1,38 @@
+:host {
+  grid-area: main;
+}
+#menu_container {
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "main";
+  height:calc(100vh - 6px - 75px);
+  overflow:scroll;
+}
+::-webkit-scrollbar {
+   display: none;
+ }
+
+#order {
+  display: grid;
+  grid-template-columns: 50fr 50fr ;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "main order";
+}
+@media screen and (max-width: 900px){
+  #order {
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "order"
+      "main";
+  }
+
+}
+@media screen and (min-width: 601px){
+  ::ng-deep .dish .dish_name {
+    font-size:3vw !important;
+  }
+}

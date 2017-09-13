@@ -1,0 +1,85 @@
+:host {
+  grid-area: order;
+}
+
+.dollar,
+.price {
+  font-size:calc(1rem + 6.5vw);
+}
+
+.mat-card {
+  margin:0.5em;
+  background-image: linear-gradient(to bottom, #f2ca3a 0%,#fdc037 100%);
+  background-blend-mode: multiply;
+}
+.mat-card button[color='primary'] {
+  background-color: rgba(18,3,3,0.66);
+  color: #f2ca3a;
+}
+
+#itemizedrecipt {
+  margin:0;
+  padding:0;
+}
+#itemizedrecipt > li {
+  list-style-type: none;
+}
+
+.full {
+  width: 100%;
+  max-width:500px;
+}
+.half {
+  width: 50%;
+}
+.third {
+  width: 33%;
+}
+.twothirds {
+  width: 66%;
+}
+.quarter {
+  width: 25%;
+}
+md-chip {
+  margin-bottom:0.50rem !important;
+}
+md-chip > span {
+  margin-right:0.25rem;
+}
+md-chip:first-of-type {
+  margin-left: 8px;
+}
+md-spinner,
+md-progress-spinner {
+  text-align: center;
+}
+#eta {
+  display: block;
+  text-align: center;
+}
+
+#delivery {
+  display: grid !important;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "ad1 ad1"
+    "ad2 ad2"
+    "cit zip"
+    "prv cnt"
+    "nme phn"
+    "ins ins";
+}
+#delivery > * {
+  width: 99%;
+}
+#delivery .ad1 { grid-area: ad1;}
+#delivery .ad2 { grid-area: ad2;}
+#delivery .cit { grid-area: cit;}
+#delivery .zip { grid-area: zip;}
+#delivery [name=province] { grid-area: prv;}
+#delivery [name=country] { grid-area: cnt;}
+#delivery .nme { grid-area: nme;}
+#delivery .phn { grid-area: phn;}
+#delivery .ins { grid-area: ins;}

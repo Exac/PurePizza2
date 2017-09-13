@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Sintony|Source+Sans+Pro:900');
+@import url("~@angular/material/prebuilt-themes/pink-bluegrey.css");
+html {
+  font-size: 18px;
+}
+
+body {
+  background: radial-gradient(at bottom center, #c7d1d9, #83a8c5);
+  font-family: 'Sintony', sans-serif;
+  color:rgba(19,19,19,0.875);
+}
+
+router-outlet {
+  background:red;
+  display:none;
+  visibility: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,title,.title {
+  font-family:'Source Code Pro', sans-serif;
+}
+
+p {
+  font-size: 0.875rem;
+}
+
+button:enabled {
+  animation-name: glow;
+  animation-duration: 1250ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0px 0px 33px 0 rgba(255,255,255,0.36);
+  }
+  50% {
+    box-shadow: 0px 0px 33px 8px rgba(255,255,255,0.15);
+  }
+  100% {
+    box-shadow: 0px 0px 33px 0 rgba(255,255,255,0.36);
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 15px;
+}
+
+
+::-webkit-scrollbar-track-piece  {
+  background-image: radial-gradient(at bottom center, #c7d1d9, #83a8c5);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  width:3px;
+  background-color: rgba(0,0,0.785);
+  background-color:white;
+}
+
+
+
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }

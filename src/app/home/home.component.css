@@ -1,0 +1,81 @@
+:host {
+  grid-area: main;
+}
+
+main {
+  display: flex;
+  box-sizing: content-box;
+  flex-direction:column;
+  justify-content: center;
+  outline: 4px solid #ffffff;
+  margin:12px;
+  min-height:75vh;
+}
+
+main,
+main > p,
+main > h1{
+  animation-duration: 100ms;
+  animation-name: enterdown;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+main > button {
+  margin: 0 auto 0 auto;
+  height:3rem;
+  width: 5rem;
+  font-weight: 700;
+}
+
+@keyframes fate1s {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes enterdown {
+  from {
+    min-height: 0;
+    height: 0;
+    font-size: 0px;
+  }
+  to {
+  }
+}
+
+.motto,
+.title,
+.tagline {
+  color:#ffffff;
+  text-align: center;
+  text-shadow: 0 0 1.5em rgba(0,0,0,0.25), 1px 1px 1px rgba(98, 97, 100, 0.44);
+}
+
+.motto,
+.tagline{
+  font-size:2rem;
+}
+
+
+.title {
+  font-size: calc(1rem + 8.5vw);
+  line-height:calc(1rem + 8.5vw);
+  margin:0;
+}
+
+.tagline {
+
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: calc(1rem + 8.5vw);
+  }
+  .motto,
+  .tagline{
+    font-size: calc(1rem + 1.875vw);
+  }
+}
+

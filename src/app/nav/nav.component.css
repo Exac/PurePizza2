@@ -1,0 +1,50 @@
+:host {
+  grid-area: nav;
+  max-height: 75px;
+}
+
+nav {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+}
+
+nav a {
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  width: calc(38.5px + 8.5vw);
+  height: calc(38.5px + 8.5vw);
+  line-height:calc(38.5px + 8.5vw);
+  margin: 3px 2vw 0 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family:'Source Code Pro', sans-serif;
+  transition-duration: 320ms;
+  transition-timing-function: ease-out;
+  animation-name: glow;
+  animation-duration: 1250ms;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+nav a:hover {
+  background-color: #ccffff;
+  transition-duration: 66ms;
+  transition-timing-function: ease-in;
+}
+
+
+@media screen and (min-width: 600px){
+  nav a{
+    width:90px;
+    height:90px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 340px){
+  nav a {
+    letter-spacing:-0.0875em;
+  }
+}

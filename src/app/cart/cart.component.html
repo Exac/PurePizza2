@@ -1,0 +1,152 @@
+<md-card>
+  <md-tab-group [selectedIndex]="this.cardDisplay.tab">
+    <md-tab
+      label="Order Details"
+      [(disabled)]="!cardDisplay.order">
+      <md-card-header>
+        <!--<md-card-title>Order Details</md-card-title>-->
+      </md-card-header>
+      <md-card-content>
+        <span class="dollar">$</span>
+        <span class="price">{{ price }}</span>
+        <br>
+        <md-checkbox
+          class="delivery">Delivery
+        </md-checkbox>
+        <md-chip-list>
+          <md-chip *ngFor="let d of dishes">
+            <span class="itemprice">{{d.price}}</span>
+            <span class="itemname">{{d.name}}</span>
+          </md-chip>
+        </md-chip-list>
+      </md-card-content>
+      <button
+        md-raised-button
+        color="primary"
+        id="checkout1"
+        (click)="showCard('delivery')"
+      >
+        CHECKOUT
+      </button>
+    </md-tab>
+    <md-tab
+      label="Delivery Info"
+      [(disabled)]="!cardDisplay.delivery">
+      <form (ngSubmit)="onSubmit()" #deliveryForm="ngForm">
+        <md-card-header>
+          <md-card-title-group>
+            <!--<md-card-title>Delivery Info</md-card-title>-->
+            <md-card-subtitle></md-card-subtitle>
+          </md-card-title-group>
+        </md-card-header>
+        <md-card-content>
+          <section id="delivery">
+            <md-form-field class="ad1">
+              <input mdInput
+                     required
+                     [(ngModel)]="model.address"
+                     id="address"
+                     name="address"
+                     placeholder="Address">
+            </md-form-field>
+            <md-form-field class="ad2">
+              <input mdInput
+                     [(ngModel)]="model.address2"
+                     id="address2"
+                     name="address2"
+                     placeholder="Address (line 2)">
+            </md-form-field>
+            <md-form-field class="cit">
+              <input mdInput
+                     required [(ngModel)]="model.city"
+                     id="city"
+                     name="city"
+                     placeholder="City">
+            </md-form-field>
+            <md-form-field class="zip">
+              <input mdInput
+                     [(ngModel)]="model.postal"
+                     id="postal"
+                     name="postal"
+                     placeholder="Postal">
+            </md-form-field>
+            <md-select required
+                       [(ngModel)]="model.province"
+                       id="province"
+                       name="province"
+                       placeholder="Province"
+                       class="full">
+              <md-option *ngFor="let p of provinces"
+                         [value]="p.code">
+                {{ p.name }}
+              </md-option>
+            </md-select>
+            <md-select required
+                       [(ngModel)]="model.country"
+                       id="country"
+                       name="country"
+                       placeholder="Country"
+                       class="full">
+              <md-option *ngFor="let c of countries"
+                         [value]="c.code">
+                {{ c.name }}
+              </md-option>
+            </md-select>
+            <md-form-field class="nme">
+              <input mdInput
+                     required [(ngModel)]="model.name"
+                     id="name"
+                     name="name"
+                     placeholder="Full Name">
+            </md-form-field>
+            <md-form-field class="phn">
+              <input mdInput
+                     required [(ngModel)]="model.phone"
+                     id="phone"
+                     name="phone"
+                     placeholder="Phone">
+            </md-form-field>
+            <md-form-field class="ins">
+              <input mdInput [(ngModel)]="model.instructions"
+                     id="instructions"
+                     name="instructions"
+                     placeholder="Instructions for deliverer.">
+            </md-form-field>
+          </section>
+        </md-card-content>
+        <button md-raised-button
+                id="checkout2"
+                type="submit"
+                color="primary"
+                (click)="newDelivery(); showCard('time')"
+                [disabled]="!deliveryForm.form.valid"
+        >Deliver
+        </button>
+      </form>
+    </md-tab>
+    <md-tab
+      label="Time Remaining"
+      [(disabled)]="!cardDisplay.time">
+      <md-card-header>
+        <!--<md-card-title>Time Remaining</md-card-title>-->
+      </md-card-header>
+      <md-card-content>
+        <md-progress-bar
+          class="example-margin"
+          color="primary"
+          mode="determinate"
+          [value]="this.model.percentageElapsedTime"
+          bufferValue="100">
+        </md-progress-bar>
+        <md-progress-spinner
+          name="progress"
+          aria-labelledby="eta"
+          strokeWidth="33"
+          color="primary"
+          mode="determinate"
+          [value]="this.model.percentageElapsedTime"></md-progress-spinner>
+        <span id="eta" [innerHtml]="countdown"></span>
+      </md-card-content>
+    </md-tab>
+  </md-tab-group>
+</md-card>

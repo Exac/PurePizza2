@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="sun_x5F_art" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" width="158px" height="158px" viewBox="0 0 158 158" enable-background="new 0 0 158 158" xml:space="preserve">
+<circle id="sun" fill="#FFFFFF" stroke="#FFFFEE" stroke-width="8" stroke-miterlimit="10" cx="79" cy="79" r="75"/>
+<circle id="inner_x5F_crust" fill="none" stroke="#FFFFEE" stroke-width="4" stroke-miterlimit="10" cx="79" cy="79" r="65"/>
+<path id="slices" fill="none" stroke="#FFFFEE" stroke-width="4" stroke-miterlimit="10" d="M144,79
+	c0,10.453-2.468,20.33-6.852,29.08L79,79l26.154,59.523C97.151,142.045,88.304,144,79,144V79l-55.784,33.384
+	C17.364,102.626,14,91.206,14,79h65L39.835,27.119C50.727,18.884,64.293,14,79,14v65l57.289-30.734
+	C141.209,57.417,144,67.882,144,79z"/>
+<path id="mushroom1" fill="none" stroke="#FFFEEC" stroke-width="3" stroke-miterlimit="10" d="M94.5,50.694c0,0-3,8.806,0,8.806
+	c4,0,8,0,11,0s0-8.806,0-8.806s3.75-1.409,9.386,0c5.636,1.409,11.913-14.559-14.621-14.559S79.947,52.103,86.521,50.929
+	C93.098,49.755,94.5,50.694,94.5,50.694z"/>
+<path id="mushroom2" fill="none" stroke="#FFFEEC" stroke-width="3" stroke-miterlimit="10" d="M57.242,121.975
+	c0,0,4.105,8.349,6.227,6.227c2.829-2.828,5.657-5.656,7.778-7.777c2.122-2.122-6.227-6.227-6.227-6.227s1.655-3.648,6.637-6.637
+	c4.981-2.989-1.871-18.719-20.633,0.044c-18.762,18.763-3.076,25.657,0.743,20.179C55.587,122.303,57.242,121.975,57.242,121.975z"
+	/>
+<circle id="pepperoni" fill="none" stroke="#FFF5F3" stroke-width="3" stroke-miterlimit="10" cx="39.5" cy="65.167" r="11.167"/>
+<circle id="pepperoni_1_" fill="none" stroke="#FFF5F3" stroke-width="3" stroke-miterlimit="10" cx="121.5" cy="77.167" r="11.167"/>
+<circle id="pepperoni_2_" fill="none" stroke="#FFF5F3" stroke-width="3" stroke-miterlimit="10" cx="111.5" cy="114.167" r="11.167"/>
+</svg>
