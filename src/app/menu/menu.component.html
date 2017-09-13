@@ -1,15 +1,17 @@
 <div class="dish"
      *ngFor="let d of menu"
      [ngStyle]="{'background-image' : 'url(assets/images/menu/' + d.image + ')'}">
-  <div class="dish_info_container">
+  <md-card class="dish_info_container">
     <p class="dish_name">{{d.name}}</p>
     <p class="dish_price">${{d.price}}</p>
     <button
+      md-raised-button
+      color="primary"
       class="dish_add_to_cart"
       value="{{d.id}}"
       (click)="addToCart(d.id)">
       Add
     </button>
     <p class="dish_cal">{{d.calories}} <sub>cal</sub></p>
-  </div>
+  </md-card>
 </div>

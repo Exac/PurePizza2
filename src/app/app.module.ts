@@ -5,7 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MdButtonModule, MdCardModule, MdCheckboxModule, MdProgressBarModule,
   MdInputModule, MdSelectModule, MdProgressSpinnerModule, MdChipsModule,
-  MdTabsModule
+  MdTabsModule, MdExpansionModule
 } from '@angular/material';
 
 import { RoutingModule } from './routing/routing.module';
@@ -45,7 +45,8 @@ import { CartComponent } from './cart/cart.component';
     MdSelectModule,
     MdProgressSpinnerModule,
     MdChipsModule,
-    MdTabsModule
+    MdTabsModule,
+    MdExpansionModule
   ],
   providers: [
     MenuService,

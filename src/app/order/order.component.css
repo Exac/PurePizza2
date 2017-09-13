@@ -8,7 +8,9 @@
   grid-template-areas:
     "main";
   height:calc(100vh - 6px - 75px);
-  overflow:scroll;
+  padding-right: 0;
+  width: 100%;
+  overflow: hidden;
 }
 ::-webkit-scrollbar {
    display: none;
@@ -32,6 +34,7 @@
 
 }
 @media screen and (min-width: 601px){
+  /*noinspection CssUnusedSymbol,CssInvalidPseudoSelector*/
   ::ng-deep .dish .dish_name {
     font-size:3vw !important;
   }

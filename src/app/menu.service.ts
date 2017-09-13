@@ -48,6 +48,7 @@ export class MenuService {
       ));
   }
 
+  // noinspection ReservedWordAsName
   delete (id: number): void {
     let item: Dish = this.dishes
       .filter(dish => (dish.id === id))
@@ -56,7 +57,7 @@ export class MenuService {
     this.dishes.splice(index, 1);
   }
 
-  private getLastIndex (id_num: number): number {
+  private getLastIndex (): number {
     const max: Dish = this.dishes.reduce((prev, current) => (prev.id > current.id) ? prev : current);
     return max.id + 1;
   }

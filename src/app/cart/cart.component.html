@@ -1,5 +1,5 @@
 <md-card>
-  <md-tab-group [selectedIndex]="this.cardDisplay.tab">
+  <md-tab-group [selectedIndex]="cardDisplay.tab">
     <md-tab
       label="Order Details"
       [(disabled)]="!cardDisplay.order">
@@ -135,7 +135,7 @@
           class="example-margin"
           color="primary"
           mode="determinate"
-          [value]="this.model.percentageElapsedTime"
+          [value]="model.percentageElapsedTime"
           bufferValue="100">
         </md-progress-bar>
         <md-progress-spinner
@@ -144,7 +144,7 @@
           strokeWidth="33"
           color="primary"
           mode="determinate"
-          [value]="this.model.percentageElapsedTime"></md-progress-spinner>
+          [value]="model.percentageElapsedTime"></md-progress-spinner>
         <span id="eta" [innerHtml]="countdown"></span>
       </md-card-content>
     </md-tab>

@@ -9,11 +9,14 @@ nav {
   justify-content: center;
 }
 
-nav a {
+/*noinspection ALL*/
+nav button {
+  border-radius:0 !important;
   background-color: #ffffff;
   color: #000000;
   text-decoration: none;
   width: calc(38.5px + 8.5vw);
+  /*noinspection CssFloatPxLength*/
   height: calc(38.5px + 8.5vw);
   line-height:calc(38.5px + 8.5vw);
   margin: 3px 2vw 0 3px;
@@ -28,15 +31,15 @@ nav a {
   animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
-nav a:hover {
-  background-color: #ccffff;
+nav button:hover {
+  /*background-color: #ccffff;*/
   transition-duration: 66ms;
   transition-timing-function: ease-in;
 }
 
 
 @media screen and (min-width: 600px){
-  nav a{
+  nav button{
     width:90px;
     height:90px;
     line-height: 90px;
@@ -44,7 +47,7 @@ nav a:hover {
 }
 
 @media screen and (max-width: 340px){
-  nav a {
+  nav button {
     letter-spacing:-0.0875em;
   }
 }

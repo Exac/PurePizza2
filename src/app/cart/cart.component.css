@@ -7,6 +7,7 @@
   font-size:calc(1rem + 6.5vw);
 }
 
+/*noinspection ALL*/
 .mat-card {
   margin:0.5em;
   background-image: linear-gradient(to bottom, #f2ca3a 0%,#fdc037 100%);
@@ -17,10 +18,6 @@
   color: #f2ca3a;
 }
 
-#itemizedrecipt {
-  margin:0;
-  padding:0;
-}
 #itemizedrecipt > li {
   list-style-type: none;
 }
